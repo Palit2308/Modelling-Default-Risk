@@ -1,0 +1,67 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                             count
+----------------------------  -------
+all                                 1
+initial_panel_inspection            1
+inspect_defaulting_companies        1
+total                               3
+
+Select jobs to execute...
+Execute 2 jobs...
+[Wed May  7 16:23:31 2025]
+localrule initial_panel_inspection:
+    input: Data/bankruptcy_filings/bankruptcy_filings_cleaned.csv, Data/financials/financials_annual.gz
+    output: Results/intial_inspection/dominant_datadate_per_year.csv, Results/intial_inspection/companies_per_year_dominant_date.csv
+    jobid: 1
+    reason: Code has changed since last execution
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+[Wed May  7 16:23:31 2025]
+localrule inspect_defaulting_companies:
+    input: Data/financials/financials_annual.gz
+    output: Results/initial_inspection/defaulting_companies_year.csv, Results/initial_inspection/yearly_cases_default.csv
+    jobid: 2
+    reason: Missing output files: Results/initial_inspection/defaulting_companies_year.csv, Results/initial_inspection/yearly_cases_default.csv
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+RuleException:
+CalledProcessError in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 26:
+Command 'C:/Users/biswa/anaconda3/envs/snakemake/python.exe "C:\Users\biswa\DefaultRiskValuation\.snakemake\scripts\tmprtnjgcmt.inspect_defaulting_companies.py"' returned non-zero exit status 1.
+[Wed May  7 16:23:34 2025]
+Error in rule inspect_defaulting_companies:
+    message: None
+    jobid: 2
+    input: Data/financials/financials_annual.gz
+    output: Results/initial_inspection/defaulting_companies_year.csv, Results/initial_inspection/yearly_cases_default.csv
+RuleException:
+CalledProcessError in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 17:
+Command 'C:/Users/biswa/anaconda3/envs/snakemake/python.exe "C:\Users\biswa\DefaultRiskValuation\.snakemake\scripts\tmpajn5mtak.inspect_panel_structure.py"' returned non-zero exit status 1.
+[Wed May  7 16:23:47 2025]
+Error in rule initial_panel_inspection:
+    message: None
+    jobid: 1
+    input: Data/bankruptcy_filings/bankruptcy_filings_cleaned.csv, Data/financials/financials_annual.gz
+    output: Results/intial_inspection/dominant_datadate_per_year.csv, Results/intial_inspection/companies_per_year_dominant_date.csv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed May  7 16:23:47 2025]
+Error in rule initial_panel_inspection:
+    message: None
+    jobid: 1
+    input: Data/bankruptcy_filings/bankruptcy_filings_cleaned.csv, Data/financials/financials_annual.gz
+    output: Results/intial_inspection/dominant_datadate_per_year.csv, Results/intial_inspection/companies_per_year_dominant_date.csv
+[Wed May  7 16:23:47 2025]
+Error in rule inspect_defaulting_companies:
+    message: None
+    jobid: 2
+    input: Data/financials/financials_annual.gz
+    output: Results/initial_inspection/defaulting_companies_year.csv, Results/initial_inspection/yearly_cases_default.csv
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-05-07T162331.611426.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

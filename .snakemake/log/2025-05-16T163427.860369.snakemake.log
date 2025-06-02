@@ -1,0 +1,39 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count
+------------------------  -------
+all                             1
+create_smaller_pandas_df        1
+total                           2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri May 16 16:34:27 2025]
+localrule create_smaller_pandas_df:
+    input: Data/financials/financials_annual.gz, Data/bankruptcy_filings/bankruptcy_filings_cleaned.csv
+    output: Data/prepared_datasets/financials_annual_merton.csv
+    jobid: 1
+    reason: Code has changed since last execution
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+[Fri May 16 16:36:25 2025]
+Finished jobid: 1 (Rule: create_smaller_pandas_df)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri May 16 16:36:25 2025]
+localrule all:
+    input: Data/prepared_datasets/financials_annual_merton.csv
+    jobid: 0
+    reason: Input files updated by another job: Data/prepared_datasets/financials_annual_merton.csv
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+[Fri May 16 16:36:25 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-05-16T163427.860369.snakemake.log

@@ -1,0 +1,36 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+create_imputed_df        1
+total                    2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri May 23 16:10:27 2025]
+localrule create_imputed_df:
+    input: Data/prepared_datasets/financials_annual_merton.csv, Data/prepared_datasets/stocks_data_prepared.csv, Data/daily_data/Yearly 1Y Treasury Rate.xlsx
+    output: Results/Data/prepared_datasets/financials_annual_merton_imputed.csv
+    jobid: 1
+    reason: Missing output files: Results/Data/prepared_datasets/financials_annual_merton_imputed.csv
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+RuleException:
+CalledProcessError in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 68:
+Command 'C:/Users/biswa/anaconda3/envs/snakemake/python.exe "C:\Users\biswa\DefaultRiskValuation\.snakemake\scripts\tmp_4c8nxtd.create_imputed_data.py"' returned non-zero exit status 3221225786.
+[Fri May 23 16:10:39 2025]
+Error in rule create_imputed_df:
+    message: None
+    jobid: 1
+    input: Data/prepared_datasets/financials_annual_merton.csv, Data/prepared_datasets/stocks_data_prepared.csv, Data/daily_data/Yearly 1Y Treasury Rate.xlsx
+    output: Results/Data/prepared_datasets/financials_annual_merton_imputed.csv
+Terminating processes on user request, this might take some time.
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-05-23T161027.811208.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

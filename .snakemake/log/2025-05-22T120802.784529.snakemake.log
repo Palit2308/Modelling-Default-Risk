@@ -1,0 +1,39 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                            count
+---------------------------  -------
+all                                1
+merton_model_implimentation        1
+total                              2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu May 22 12:08:02 2025]
+localrule merton_model_implimentation:
+    input: Data/prepared_datasets/financials_annual_merton.csv, Data/prepared_datasets/stocks_data_prepared.csv, Data/daily_data/Yearly 1Y Treasury Rate.xlsx
+    output: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/dropna/tables/two_system_merton_performance.csv, Results/merton_model/dropna/tables/one_system_merton_predictions.csv, Results/merton_model/dropna/tables/one_system_merton_performance.csv
+    jobid: 1
+    reason: Missing output files: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/dropna/tables/two_system_merton_performance.csv, Results/merton_model/dropna/tables/one_system_merton_predictions.csv, Results/merton_model/dropna/tables/one_system_merton_performance.csv
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+[Thu May 22 12:36:09 2025]
+Finished jobid: 1 (Rule: merton_model_implimentation)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu May 22 12:36:09 2025]
+localrule all:
+    input: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/dropna/tables/two_system_merton_performance.csv, Results/merton_model/dropna/tables/one_system_merton_predictions.csv, Results/merton_model/dropna/tables/one_system_merton_performance.csv
+    jobid: 0
+    reason: Input files updated by another job: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/dropna/tables/one_system_merton_predictions.csv, Results/merton_model/dropna/tables/one_system_merton_performance.csv, Results/merton_model/dropna/tables/two_system_merton_performance.csv
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+[Thu May 22 12:36:09 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-05-22T120802.784529.snakemake.log

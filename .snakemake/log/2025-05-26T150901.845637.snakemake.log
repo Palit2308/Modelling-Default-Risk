@@ -1,0 +1,8 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+MissingInputException in rule all in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 1:
+Missing input files for rule all:
+    affected files:
+        Results/merton_model/notdropped/plots/equity_asset_vol_trend.png

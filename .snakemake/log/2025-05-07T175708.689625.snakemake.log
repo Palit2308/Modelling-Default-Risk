@@ -1,0 +1,43 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+all                  1
+checking_gaps        1
+total                2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Wed May  7 17:57:08 2025]
+localrule checking_gaps:
+    input: Data/financials/financials_annual.gz
+    output: Results/initial_inspection/companies_with_gaps.csv, Results/initial_inspection/gapcount.csvResults/initial_inspection/percent_no_gap.csv
+    jobid: 3
+    reason: Missing output files: Results/initial_inspection/gapcount.csvResults/initial_inspection/percent_no_gap.csv, Results/initial_inspection/companies_with_gaps.csv
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+RuleException:
+CalledProcessError in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 30:
+Command 'C:/Users/biswa/anaconda3/envs/snakemake/python.exe "C:\Users\biswa\DefaultRiskValuation\.snakemake\scripts\tmp8opb5fga.checking_gaps.py"' returned non-zero exit status 1.
+[Wed May  7 17:58:00 2025]
+Error in rule checking_gaps:
+    message: None
+    jobid: 3
+    input: Data/financials/financials_annual.gz
+    output: Results/initial_inspection/companies_with_gaps.csv, Results/initial_inspection/gapcount.csvResults/initial_inspection/percent_no_gap.csv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed May  7 17:58:00 2025]
+Error in rule checking_gaps:
+    message: None
+    jobid: 3
+    input: Data/financials/financials_annual.gz
+    output: Results/initial_inspection/companies_with_gaps.csv, Results/initial_inspection/gapcount.csvResults/initial_inspection/percent_no_gap.csv
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-05-07T175708.689625.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

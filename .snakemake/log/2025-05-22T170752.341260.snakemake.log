@@ -1,0 +1,43 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                          count
+-------------------------  -------
+all                              1
+merton_model_descriptives        1
+total                            2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu May 22 17:07:52 2025]
+localrule merton_model_descriptives:
+    input: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/dropna/tables/one_system_merton_predictions.csv
+    output: Results/merton_model/dropna/tables/two_system_summary_stats.csv, Results/merton_model/dropna/tables/one_system_summary_stats.csv, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_PD_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Equity_Returns_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Equity_Vol_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Asset_Vol_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Implied_A2D_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Book_A2D_Evolution.png, Results/merton_model/dropna/plots/Two_System_Implied_A2D_vs_Book_A2D_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_PD_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Equity_Returns_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Equity_Vol_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Asset_Vol_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Implied_A2D_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Book_A2D_Evolution.png, Results/merton_model/dropna/plots/One_System_Implied_A2D_vs_Book_A2D_Evolution.png
+    jobid: 1
+    reason: Code has changed since last execution
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+RuleException:
+CalledProcessError in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 79:
+Command 'C:/Users/biswa/anaconda3/envs/snakemake/python.exe "C:\Users\biswa\DefaultRiskValuation\.snakemake\scripts\tmpi9pqpa1e.model_checks_and_propensity_matching.py"' returned non-zero exit status 1.
+[Thu May 22 17:08:00 2025]
+Error in rule merton_model_descriptives:
+    message: None
+    jobid: 1
+    input: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/dropna/tables/one_system_merton_predictions.csv
+    output: Results/merton_model/dropna/tables/two_system_summary_stats.csv, Results/merton_model/dropna/tables/one_system_summary_stats.csv, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_PD_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Equity_Returns_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Equity_Vol_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Asset_Vol_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Implied_A2D_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Book_A2D_Evolution.png, Results/merton_model/dropna/plots/Two_System_Implied_A2D_vs_Book_A2D_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_PD_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Equity_Returns_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Equity_Vol_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Asset_Vol_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Implied_A2D_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Book_A2D_Evolution.png, Results/merton_model/dropna/plots/One_System_Implied_A2D_vs_Book_A2D_Evolution.png
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Thu May 22 17:08:00 2025]
+Error in rule merton_model_descriptives:
+    message: None
+    jobid: 1
+    input: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/dropna/tables/one_system_merton_predictions.csv
+    output: Results/merton_model/dropna/tables/two_system_summary_stats.csv, Results/merton_model/dropna/tables/one_system_summary_stats.csv, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_PD_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Equity_Returns_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Equity_Vol_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Asset_Vol_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Implied_A2D_Evolution.png, Results/merton_model/dropna/plots/Two_System_Default_vs_Controls_Book_A2D_Evolution.png, Results/merton_model/dropna/plots/Two_System_Implied_A2D_vs_Book_A2D_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_PD_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Equity_Returns_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Equity_Vol_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Asset_Vol_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Implied_A2D_Evolution.png, Results/merton_model/dropna/plots/One_System_Default_vs_Controls_Book_A2D_Evolution.png, Results/merton_model/dropna/plots/One_System_Implied_A2D_vs_Book_A2D_Evolution.png
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-05-22T170752.341260.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

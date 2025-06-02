@@ -1,0 +1,39 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+create_imputed_df        1
+total                    2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri May 23 16:11:34 2025]
+localrule create_imputed_df:
+    input: Data/prepared_datasets/financials_annual_merton.csv, Data/prepared_datasets/stocks_data_prepared.csv, Data/daily_data/Yearly 1Y Treasury Rate.xlsx
+    output: Data/prepared_datasets/financials_annual_merton_imputed.csv
+    jobid: 1
+    reason: Missing output files: Data/prepared_datasets/financials_annual_merton_imputed.csv
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+[Fri May 23 16:14:01 2025]
+Finished jobid: 1 (Rule: create_imputed_df)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri May 23 16:14:01 2025]
+localrule all:
+    input: Data/prepared_datasets/financials_annual_merton_imputed.csv
+    jobid: 0
+    reason: Input files updated by another job: Data/prepared_datasets/financials_annual_merton_imputed.csv
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+[Fri May 23 16:14:01 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-05-23T161134.540184.snakemake.log

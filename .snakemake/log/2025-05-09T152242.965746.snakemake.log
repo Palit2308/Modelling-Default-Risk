@@ -1,0 +1,9 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+MissingInputException in rule no_defaults_per_year_labelled in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 15:
+Missing input files for rule no_defaults_per_year_labelled:
+    output: Results/labelled_data_inspection/no_of_defaults_per_year.csv
+    affected files:
+        Data/financials/financials_annual.gzData/bankruptcy_filings/bankruptcy_filings_cleaned.csv

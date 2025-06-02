@@ -1,0 +1,55 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                      count
+-------------------------------------  -------
+all                                          1
+descriptive_statistics_2                     1
+descriptive_statistics_for_inspection        1
+total                                        3
+
+Select jobs to execute...
+Execute 2 jobs...
+[Thu May 22 11:27:58 2025]
+localrule descriptive_statistics_2:
+    input: Data/prepared_datasets/financials_annual_merton.csv, Data/prepared_datasets/stocks_data_prepared.csv, Data/daily_data/Yearly 1Y Treasury Rate.xlsx
+    output: Results/prepared_data_inspection/tables/cusip_level_null_values_percentage.csv, Results/prepared_data_inspection/plots/distribution_of_null_values_across_cusips.png, Results/prepared_data_inspection/plots/distribution_of_missingness_by_default_status.png, Results/prepared_data_inspection/tables/count_of_less_than_40_pct_null_by_default_status.csv
+    jobid: 2
+    reason: Missing output files: Results/prepared_data_inspection/tables/cusip_level_null_values_percentage.csv, Results/prepared_data_inspection/plots/distribution_of_missingness_by_default_status.png, Results/prepared_data_inspection/tables/count_of_less_than_40_pct_null_by_default_status.csv, Results/prepared_data_inspection/plots/distribution_of_null_values_across_cusips.png
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+[Thu May 22 11:27:58 2025]
+localrule descriptive_statistics_for_inspection:
+    input: Data/prepared_datasets/financials_annual_merton.csv, Data/prepared_datasets/stocks_data_prepared.csv, Data/daily_data/Yearly 1Y Treasury Rate.xlsx
+    output: Results/prepared_data_inspection/tables/summary_table.csv, Results/prepared_data_inspection/tables/missing_at_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_at.png, Results/prepared_data_inspection/tables/missing_dt_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_dt.png, Results/prepared_data_inspection/tables/missing_ceq_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_ceq.png, Results/prepared_data_inspection/tables/missing_csho_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_csho.png, Results/prepared_data_inspection/plots/missingness_by_asset_quintiles_3A.png, Results/prepared_data_inspection/plots/missingness_extreme_values_3B.png, Results/prepared_data_inspection/plots/autocorrelation in variables.png, Results/prepared_data_inspection/plots/correlation_heatmap.png, Results/prepared_data_inspection/tables/data_default_summary_table.csv, Results/prepared_data_inspection/plots/null_proportions_by_year.png
+    jobid: 1
+    reason: Updated input files: Data/daily_data/Yearly 1Y Treasury Rate.xlsx
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+RuleException:
+CalledProcessError in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 75:
+Command 'C:/Users/biswa/anaconda3/envs/snakemake/python.exe "C:\Users\biswa\DefaultRiskValuation\.snakemake\scripts\tmp2hhy44zw.descriptive_inspection.py"' returned non-zero exit status 1.
+[Thu May 22 11:28:08 2025]
+Error in rule descriptive_statistics_for_inspection:
+    message: None
+    jobid: 1
+    input: Data/prepared_datasets/financials_annual_merton.csv, Data/prepared_datasets/stocks_data_prepared.csv, Data/daily_data/Yearly 1Y Treasury Rate.xlsx
+    output: Results/prepared_data_inspection/tables/summary_table.csv, Results/prepared_data_inspection/tables/missing_at_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_at.png, Results/prepared_data_inspection/tables/missing_dt_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_dt.png, Results/prepared_data_inspection/tables/missing_ceq_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_ceq.png, Results/prepared_data_inspection/tables/missing_csho_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_csho.png, Results/prepared_data_inspection/plots/missingness_by_asset_quintiles_3A.png, Results/prepared_data_inspection/plots/missingness_extreme_values_3B.png, Results/prepared_data_inspection/plots/autocorrelation in variables.png, Results/prepared_data_inspection/plots/correlation_heatmap.png, Results/prepared_data_inspection/tables/data_default_summary_table.csv, Results/prepared_data_inspection/plots/null_proportions_by_year.png
+[Thu May 22 11:28:14 2025]
+Finished jobid: 2 (Rule: descriptive_statistics_2)
+1 of 3 steps (33%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Thu May 22 11:28:14 2025]
+Error in rule descriptive_statistics_for_inspection:
+    message: None
+    jobid: 1
+    input: Data/prepared_datasets/financials_annual_merton.csv, Data/prepared_datasets/stocks_data_prepared.csv, Data/daily_data/Yearly 1Y Treasury Rate.xlsx
+    output: Results/prepared_data_inspection/tables/summary_table.csv, Results/prepared_data_inspection/tables/missing_at_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_at.png, Results/prepared_data_inspection/tables/missing_dt_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_dt.png, Results/prepared_data_inspection/tables/missing_ceq_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_ceq.png, Results/prepared_data_inspection/tables/missing_csho_distribution.csv, Results/prepared_data_inspection/plots/cusip_default_imbalance_csho.png, Results/prepared_data_inspection/plots/missingness_by_asset_quintiles_3A.png, Results/prepared_data_inspection/plots/missingness_extreme_values_3B.png, Results/prepared_data_inspection/plots/autocorrelation in variables.png, Results/prepared_data_inspection/plots/correlation_heatmap.png, Results/prepared_data_inspection/tables/data_default_summary_table.csv, Results/prepared_data_inspection/plots/null_proportions_by_year.png
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-05-22T112758.187339.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -1,0 +1,43 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                              count
+-----------------------------  -------
+all                                  1
+no_defaults_per_year_labelled        1
+total                                2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri May  9 15:31:56 2025]
+localrule no_defaults_per_year_labelled:
+    input: Data/financials/financials_annual.gz, Data/bankruptcy_filings/bankruptcy_filings_cleaned.csv
+    output: Results/labelled_data_inspection/no_of_defaults_per_year.csv
+    jobid: 1
+    reason: Missing output files: Results/labelled_data_inspection/no_of_defaults_per_year.csv
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+RuleException:
+CalledProcessError in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 24:
+Command 'C:/Users/biswa/anaconda3/envs/snakemake/python.exe "C:\Users\biswa\DefaultRiskValuation\.snakemake\scripts\tmpuvsyblbg.no_defaults_per_year.py"' returned non-zero exit status 1.
+[Fri May  9 15:33:55 2025]
+Error in rule no_defaults_per_year_labelled:
+    message: None
+    jobid: 1
+    input: Data/financials/financials_annual.gz, Data/bankruptcy_filings/bankruptcy_filings_cleaned.csv
+    output: Results/labelled_data_inspection/no_of_defaults_per_year.csv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Fri May  9 15:33:55 2025]
+Error in rule no_defaults_per_year_labelled:
+    message: None
+    jobid: 1
+    input: Data/financials/financials_annual.gz, Data/bankruptcy_filings/bankruptcy_filings_cleaned.csv
+    output: Results/labelled_data_inspection/no_of_defaults_per_year.csv
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-05-09T153156.142481.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

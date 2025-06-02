@@ -1,0 +1,11 @@
+# Ignore data folders
+/data/
+/datasets/
+/content/drive/
+/LitReview/
+
+# Jupyter and environment extras
+.ipynb_checkpoints/
+__pycache__/
+.env
+.DS_Store
