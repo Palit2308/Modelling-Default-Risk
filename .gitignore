@@ -3,7 +3,10 @@
 /datasets/
 /content/drive/
 /LitReview/
-
+/Results/merton_model/dropna/one_system_merton_predictions.csv
+/Results/merton_model/dropna/two_system_merton_predictions.csv
+/Results/merton_model/notdropped/one_system_merton_predictions.csv
+/Results/merton_model/notdropped/two_system_merton_predictions.csv
 # Jupyter and environment extras
 .ipynb_checkpoints/
 __pycache__/
