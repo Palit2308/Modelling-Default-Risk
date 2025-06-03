@@ -1,0 +1,43 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: Biswajit
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                          count
+-------------------------  -------
+all                              1
+equtiy_asset_vol_tracking        1
+total                            2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Jun  3 18:11:32 2025]
+localrule equtiy_asset_vol_tracking:
+    input: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/notdropped/tables/two_system_merton_predictions.csv
+    output: Results/merton_model/dropna/plots/equity_asset_vol_trend.png, Results/merton_model/notdropped/plots/equity_asset_vol_trend.png
+    jobid: 1
+    reason: Missing output files: Results/merton_model/notdropped/plots/equity_asset_vol_trend.png; Code has changed since last execution
+    resources: tmpdir=C:\Users\biswa\AppData\Local\Temp
+
+RuleException:
+CalledProcessError in file "C:\Users\biswa\DefaultRiskValuation\Snakefile", line 124:
+Command 'C:/Users/biswa/anaconda3/envs/snakemake/python.exe "C:\Users\biswa\DefaultRiskValuation\.snakemake\scripts\tmpb3bleypg.equity_vs_asset_volatility.py"' returned non-zero exit status 1.
+[Tue Jun  3 18:11:40 2025]
+Error in rule equtiy_asset_vol_tracking:
+    message: None
+    jobid: 1
+    input: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/notdropped/tables/two_system_merton_predictions.csv
+    output: Results/merton_model/dropna/plots/equity_asset_vol_trend.png, Results/merton_model/notdropped/plots/equity_asset_vol_trend.png
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue Jun  3 18:11:40 2025]
+Error in rule equtiy_asset_vol_tracking:
+    message: None
+    jobid: 1
+    input: Results/merton_model/dropna/tables/two_system_merton_predictions.csv, Results/merton_model/notdropped/tables/two_system_merton_predictions.csv
+    output: Results/merton_model/dropna/plots/equity_asset_vol_trend.png, Results/merton_model/notdropped/plots/equity_asset_vol_trend.png
+Complete log(s): C:\Users\biswa\DefaultRiskValuation\.snakemake\log\2025-06-03T181132.908820.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

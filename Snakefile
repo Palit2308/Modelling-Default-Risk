@@ -1,27 +1,27 @@
 rule all:
     input: 
-        "Results/merton_model/notdropped/tables/two_system_summary_stats.csv",
-        "Results/merton_model/notdropped/tables/one_system_summary_stats.csv",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_PD_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Equity_Returns_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Equity_Vol_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Asset_Vol_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Implied_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Book_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Implied_A2D_vs_Book_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Implied_A2LTD_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Book_A2LTD_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_PD_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Equity_Returns_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Equity_Vol_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Asset_Vol_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Implied_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Book_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Implied_A2D_vs_Book_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Implied_A2LTD_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Book_A2LTD_Evolution.png"
-        # "Results/merton_model/dropna/plots/equity_asset_vol_trend.png",
-        # "Results/merton_model/notdropped/plots/equity_asset_vol_trend.png"
+        # "Results/merton_model/notdropped/tables/two_system_summary_stats.csv",
+        # "Results/merton_model/notdropped/tables/one_system_summary_stats.csv",
+        # "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_PD_Evolution.png",
+        # "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Equity_Returns_Evolution.png",
+        # "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Equity_Vol_Evolution.png",
+        # "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Asset_Vol_Evolution.png",
+        # "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Implied_A2D_Evolution.png",
+        # "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Book_A2D_Evolution.png",
+        # "Results/merton_model/notdropped/plots/Two_System_Implied_A2D_vs_Book_A2D_Evolution.png",
+        # "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Implied_A2LTD_Evolution.png",
+        # "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Book_A2LTD_Evolution.png",
+        # "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_PD_Evolution.png",
+        # "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Equity_Returns_Evolution.png",
+        # "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Equity_Vol_Evolution.png",
+        # "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Asset_Vol_Evolution.png",
+        # "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Implied_A2D_Evolution.png",
+        # "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Book_A2D_Evolution.png",
+        # "Results/merton_model/notdropped/plots/One_System_Implied_A2D_vs_Book_A2D_Evolution.png",
+        # "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Implied_A2LTD_Evolution.png",
+        # "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Book_A2LTD_Evolution.png"
+        "Results/merton_model/dropna/plots/equity_asset_vol_trend.png",
+        "Results/merton_model/notdropped/plots/equity_asset_vol_trend.png"
         # "Results/merton_model/notdropped/tables/two_system_merton_predictions.csv",
         # "Results/merton_model/notdropped/tables/two_system_merton_performance.csv",
         # "Results/merton_model/notdropped/tables/one_system_merton_predictions.csv",
@@ -83,45 +83,45 @@ rule all:
         # "Results/initial_inspection/out_of_range_distances.csv",
         # "Results/initial_inspection/in_range_distances.csv"
 
-rule imputed_merton_model_descriptives:
-    input:
-        "Results/merton_model/notdropped/tables/two_system_merton_predictions.csv",
-        "Results/merton_model/notdropped/tables/one_system_merton_predictions.csv"
-
-    output:
-        "Results/merton_model/notdropped/tables/two_system_summary_stats.csv",
-        "Results/merton_model/notdropped/tables/one_system_summary_stats.csv",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_PD_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Equity_Returns_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Equity_Vol_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Asset_Vol_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Implied_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Book_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Implied_A2D_vs_Book_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Implied_A2LTD_Evolution.png",
-        "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Book_A2LTD_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_PD_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Equity_Returns_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Equity_Vol_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Asset_Vol_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Implied_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Book_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Implied_A2D_vs_Book_A2D_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Implied_A2LTD_Evolution.png",
-        "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Book_A2LTD_Evolution.png"
-
-    script: 
-        "Scripts/merton_model/model_checks_and_propensity_matching.py"
-
-# rule equtiy_asset_vol_tracking:
+# rule imputed_merton_model_descriptives:
 #     input:
-#         "Results/merton_model/dropna/tables/two_system_merton_predictions.csv",
-#         "Results/merton_model/notdropped/tables/two_system_merton_predictions.csv"
+#         "Results/merton_model/notdropped/tables/two_system_merton_predictions.csv",
+#         "Results/merton_model/notdropped/tables/one_system_merton_predictions.csv"
+
 #     output:
-#         "Results/merton_model/dropna/plots/equity_asset_vol_trend.png",
-#         "Results/merton_model/notdropped/plots/equity_asset_vol_trend.png"
-#     script:
-#         "Scripts/merton_model/equity_vs_asset_volatility.py"
+#         "Results/merton_model/notdropped/tables/two_system_summary_stats.csv",
+#         "Results/merton_model/notdropped/tables/one_system_summary_stats.csv",
+#         "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_PD_Evolution.png",
+#         "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Equity_Returns_Evolution.png",
+#         "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Equity_Vol_Evolution.png",
+#         "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Asset_Vol_Evolution.png",
+#         "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Implied_A2D_Evolution.png",
+#         "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Book_A2D_Evolution.png",
+#         "Results/merton_model/notdropped/plots/Two_System_Implied_A2D_vs_Book_A2D_Evolution.png",
+#         "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Implied_A2LTD_Evolution.png",
+#         "Results/merton_model/notdropped/plots/Two_System_Default_vs_Controls_Book_A2LTD_Evolution.png",
+#         "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_PD_Evolution.png",
+#         "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Equity_Returns_Evolution.png",
+#         "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Equity_Vol_Evolution.png",
+#         "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Asset_Vol_Evolution.png",
+#         "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Implied_A2D_Evolution.png",
+#         "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Book_A2D_Evolution.png",
+#         "Results/merton_model/notdropped/plots/One_System_Implied_A2D_vs_Book_A2D_Evolution.png",
+#         "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Implied_A2LTD_Evolution.png",
+#         "Results/merton_model/notdropped/plots/One_System_Default_vs_Controls_Book_A2LTD_Evolution.png"
+
+#     script: 
+#         "Scripts/merton_model/model_checks_and_propensity_matching.py"
+
+rule equtiy_asset_vol_tracking:
+    input:
+        "Results/merton_model/dropna/tables/two_system_merton_predictions.csv",
+        "Results/merton_model/notdropped/tables/two_system_merton_predictions.csv"
+    output:
+        "Results/merton_model/dropna/plots/equity_asset_vol_trend.png",
+        "Results/merton_model/notdropped/plots/equity_asset_vol_trend.png"
+    script:
+        "Scripts/merton_model/equity_vs_asset_volatility.py"
 
 # rule merton_model_implimentation_imputed:
 #     input:
