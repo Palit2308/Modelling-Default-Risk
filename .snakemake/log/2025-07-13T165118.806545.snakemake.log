@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: LAPTOP-AQ8QDRID
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                          count
+-------------------------  -------
+all                              1
+prepare_biodiversity_data        1
+total                            2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Jul 13 16:51:19 2025]
+localrule prepare_biodiversity_data:
+    input: Data/Prepared Data/prepared_data_merton_pd.csv, Data/Raw Data/10k_biodiversity_scores.csv, Data/Raw Data/nyt_indices.csv, Data/Raw Data/survey_biodiversity_scores.csv
+    output: Data/prepared_data_regression.csv, results_quarterly/plots/Av Bio Risk by Gics4.png, results_quarterly/plots/Neg Bio Mentions by Gics4.png, results_quarterly/tables/correlation_biodiversity.csv, results_quarterly/tables/reg_results_nofe.csv, results_quarterly/tables/reg_nofe_r2.csv, results_quarterly/plots/QQ Plot Nofe.png, results_quarterly/tables/reg_results_fe.csv, results_quarterly/tables/reg_fe_r2.csv, results_quarterly/plots/QQ Plot Fe.png, results_quarterly/tables/vif_neg_av_risk_news.csv, results_quarterly/tables/normality_df_diagnostics.csv
+    jobid: 1
+    reason: Code has changed since last execution
+    resources: tmpdir=C:\Users\HP\AppData\Local\Temp
+[Sun Jul 13 16:57:45 2025]
+Finished jobid: 1 (Rule: prepare_biodiversity_data)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Jul 13 16:57:45 2025]
+localrule all:
+    input: Data/prepared_data_regression.csv, results_quarterly/plots/Av Bio Risk by Gics4.png, results_quarterly/plots/Neg Bio Mentions by Gics4.png, results_quarterly/tables/correlation_biodiversity.csv, results_quarterly/tables/reg_results_nofe.csv, results_quarterly/tables/reg_nofe_r2.csv, results_quarterly/plots/QQ Plot Nofe.png, results_quarterly/tables/reg_results_fe.csv, results_quarterly/tables/reg_fe_r2.csv, results_quarterly/plots/QQ Plot Fe.png, results_quarterly/tables/vif_neg_av_risk_news.csv, results_quarterly/tables/normality_df_diagnostics.csv
+    jobid: 0
+    reason: Input files updated by another job: results_quarterly/plots/Av Bio Risk by Gics4.png, results_quarterly/tables/vif_neg_av_risk_news.csv, Data/prepared_data_regression.csv, results_quarterly/tables/correlation_biodiversity.csv, results_quarterly/plots/Neg Bio Mentions by Gics4.png, results_quarterly/tables/reg_nofe_r2.csv, results_quarterly/plots/QQ Plot Nofe.png, results_quarterly/tables/normality_df_diagnostics.csv, results_quarterly/tables/reg_results_fe.csv, results_quarterly/plots/QQ Plot Fe.png, results_quarterly/tables/reg_fe_r2.csv, results_quarterly/tables/reg_results_nofe.csv
+    resources: tmpdir=C:\Users\HP\AppData\Local\Temp
+[Sun Jul 13 16:57:45 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): C:\Users\HP\Modelling-Default-Risk\.snakemake\log\2025-07-13T165118.806545.snakemake.log

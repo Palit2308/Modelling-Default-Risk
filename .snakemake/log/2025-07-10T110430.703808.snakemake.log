@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: LAPTOP-AQ8QDRID
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count
+----------------------  -------
+all                           1
+prepare_quarterly_data        1
+total                         2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 10 11:04:30 2025]
+localrule prepare_quarterly_data:
+    input: Data/Raw Data/fundamentals_quarterly.gz, Data/Raw Data/Florida-UCLA-LoPucki Bankruptcy Research Database 1-12-2023/Florida-UCLA-LoPucki Bankruptcy Research Database 1-12-2023.xlsx, Data/Raw Data/return_volatility_df.csv
+    output: Data/Prepared Data/prepared_data_merton_pd.csv, results_quarterly/model_performance.csv
+    jobid: 1
+    reason: Missing output files: Data/Prepared Data/prepared_data_merton_pd.csv, results_quarterly/model_performance.csv
+    resources: tmpdir=C:\Users\HP\AppData\Local\Temp
+[Thu Jul 10 11:46:19 2025]
+Finished jobid: 1 (Rule: prepare_quarterly_data)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 10 11:46:19 2025]
+localrule all:
+    input: Data/Prepared Data/prepared_data_merton_pd.csv, results_quarterly/model_performance.csv
+    jobid: 0
+    reason: Input files updated by another job: Data/Prepared Data/prepared_data_merton_pd.csv, results_quarterly/model_performance.csv
+    resources: tmpdir=C:\Users\HP\AppData\Local\Temp
+[Thu Jul 10 11:46:19 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): C:\Users\HP\Modelling-Default-Risk\.snakemake\log\2025-07-10T110430.703808.snakemake.log

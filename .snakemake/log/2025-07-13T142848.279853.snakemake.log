@@ -1,0 +1,42 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: LAPTOP-AQ8QDRID
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                          count
+-------------------------  -------
+all                              1
+prepare_biodiversity_data        1
+total                            2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Jul 13 14:28:48 2025]
+localrule prepare_biodiversity_data:
+    input: Data/Prepared Data/prepared_data_merton_pd.csv, Data/Raw Data/10k_biodiversity_scores.csv, Data/Raw Data/nyt_indices.csv, Data/Raw Data/survey_biodiversity_scores.csv
+    output: Data/prepared_data_regression.csv, results_quarterly/plots/Av Bio Risk by Gics4.png, results_quarterly/plots/Neg Bio Mentions by Gics4.png, results_quarterly/tables/correlation_biodiversity.csv, results_quarterly/tables/reg_results_nofe.csv, results_quarterly/tables/reg_nofe_r2.csv, results_quarterly/plots/QQ Plot Nofe.png, results_quarterly/tables/reg_results_fe.csv, results_quarterly/tables/reg_fe_r2.csv, results_quarterly/plots/QQ Plot Fe.png, results_quarterly/tables/vif_neg_av_risk_news.csv, results_quarterly/tables/normality_df_diagnostics.csv
+    jobid: 1
+    reason: Missing output files: results_quarterly/tables/reg_results_fe.csv, results_quarterly/tables/reg_fe_r2.csv, results_quarterly/tables/normality_df_diagnostics.csv, results_quarterly/tables/correlation_biodiversity.csv, results_quarterly/tables/reg_nofe_r2.csv, results_quarterly/tables/reg_results_nofe.csv, results_quarterly/plots/Av Bio Risk by Gics4.png, results_quarterly/plots/Neg Bio Mentions by Gics4.png, results_quarterly/tables/vif_neg_av_risk_news.csv, Data/prepared_data_regression.csv, results_quarterly/plots/QQ Plot Nofe.png, results_quarterly/plots/QQ Plot Fe.png
+    resources: tmpdir=C:\Users\HP\AppData\Local\Temp
+RuleException:
+CalledProcessError in file "C:\Users\HP\Modelling-Default-Risk\Snakefile", line 61:
+Command 'C:/Users/HP/anaconda3/envs/myenv/python.exe "C:\Users\HP\Modelling-Default-Risk\.snakemake\scripts\tmputotbljo.biodiversity_variables.py"' returned non-zero exit status 1.
+[Sun Jul 13 14:29:00 2025]
+Error in rule prepare_biodiversity_data:
+    message: None
+    jobid: 1
+    input: Data/Prepared Data/prepared_data_merton_pd.csv, Data/Raw Data/10k_biodiversity_scores.csv, Data/Raw Data/nyt_indices.csv, Data/Raw Data/survey_biodiversity_scores.csv
+    output: Data/prepared_data_regression.csv, results_quarterly/plots/Av Bio Risk by Gics4.png, results_quarterly/plots/Neg Bio Mentions by Gics4.png, results_quarterly/tables/correlation_biodiversity.csv, results_quarterly/tables/reg_results_nofe.csv, results_quarterly/tables/reg_nofe_r2.csv, results_quarterly/plots/QQ Plot Nofe.png, results_quarterly/tables/reg_results_fe.csv, results_quarterly/tables/reg_fe_r2.csv, results_quarterly/plots/QQ Plot Fe.png, results_quarterly/tables/vif_neg_av_risk_news.csv, results_quarterly/tables/normality_df_diagnostics.csv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sun Jul 13 14:29:01 2025]
+Error in rule prepare_biodiversity_data:
+    message: None
+    jobid: 1
+    input: Data/Prepared Data/prepared_data_merton_pd.csv, Data/Raw Data/10k_biodiversity_scores.csv, Data/Raw Data/nyt_indices.csv, Data/Raw Data/survey_biodiversity_scores.csv
+    output: Data/prepared_data_regression.csv, results_quarterly/plots/Av Bio Risk by Gics4.png, results_quarterly/plots/Neg Bio Mentions by Gics4.png, results_quarterly/tables/correlation_biodiversity.csv, results_quarterly/tables/reg_results_nofe.csv, results_quarterly/tables/reg_nofe_r2.csv, results_quarterly/plots/QQ Plot Nofe.png, results_quarterly/tables/reg_results_fe.csv, results_quarterly/tables/reg_fe_r2.csv, results_quarterly/plots/QQ Plot Fe.png, results_quarterly/tables/vif_neg_av_risk_news.csv, results_quarterly/tables/normality_df_diagnostics.csv
+Complete log(s): C:\Users\HP\Modelling-Default-Risk\.snakemake\log\2025-07-13T142848.279853.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

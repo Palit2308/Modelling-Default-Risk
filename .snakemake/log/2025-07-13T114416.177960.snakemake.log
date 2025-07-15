@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: LAPTOP-AQ8QDRID
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count
+----------------------  -------
+all                           1
+descriptive_statistics        1
+total                         2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Jul 13 11:44:16 2025]
+localrule descriptive_statistics:
+    input: Data/Prepared Data/prepared_data_merton_pd.csv
+    output: results_quarterly/plots/PD by quality rating.png, results_quarterly/plots/PD with time.png, results_quarterly/plots/Eq and Asset sigma with time.png
+    jobid: 1
+    reason: Missing output files: results_quarterly/plots/Eq and Asset sigma with time.png, results_quarterly/plots/PD by quality rating.png, results_quarterly/plots/PD with time.png
+    resources: tmpdir=C:\Users\HP\AppData\Local\Temp
+[Sun Jul 13 11:44:33 2025]
+Finished jobid: 1 (Rule: descriptive_statistics)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Jul 13 11:44:33 2025]
+localrule all:
+    input: results_quarterly/plots/PD by quality rating.png, results_quarterly/plots/PD with time.png, results_quarterly/plots/Eq and Asset sigma with time.png
+    jobid: 0
+    reason: Input files updated by another job: results_quarterly/plots/Eq and Asset sigma with time.png, results_quarterly/plots/PD by quality rating.png, results_quarterly/plots/PD with time.png
+    resources: tmpdir=C:\Users\HP\AppData\Local\Temp
+[Sun Jul 13 11:44:33 2025]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): C:\Users\HP\Modelling-Default-Risk\.snakemake\log\2025-07-13T114416.177960.snakemake.log
