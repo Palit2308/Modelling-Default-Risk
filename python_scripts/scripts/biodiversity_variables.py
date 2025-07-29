@@ -308,10 +308,6 @@ vif_df['VIF'] = [variance_inflation_factor(X2.values, i) for i in range(X2.shape
 
 
 
-
-
-
-
 df_final_1 = df_final.copy()
 df_final_1 = df_final_1.sort_values(['cusip', 'fyearq', 'fqtr'])  # Ensure sorted by firm and time
 df_final_1['PD_lag'] = df_final_1.groupby('cusip')['PD'].shift(1)
@@ -344,9 +340,7 @@ df_final_1['residuals_fe_lags'] = results3.resid
 df_t = results3.df_resid  # Or simply use: df_t = len(df_final_1) - number_of_params
 
 # QQ Plot of residuals vs t-distribution
-sm.qqplot(df_final_1['residuals_fe_lags'], dist=stats.t, distargs=(df_t,), line='45')
-
-plt.title(f"QQ-Plot of Residuals vs t-Distribution (df={df_t:.0f})")
+sm.qqplot(df_final_1['residuals_fe_lags'], line='45')
 plt.tight_layout()
 plt.show()
 plt.savefig("results_quarterly/plots/QQ Plot Fe lags.png", dpi=300) #snakemake.output[15]

@@ -1,0 +1,44 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: LAPTOP-AQ8QDRID
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count
+----------------------  -------
+all                           1
+descriptive_statistics        1
+total                         2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Jul 15 13:38:32 2025]
+localrule descriptive_statistics:
+    input: Data/Prepared Data/prepared_data_merton_pd.csv, Data/Raw Data/nyt_indices.csv
+    output: results_quarterly/plots/PD by quality rating.png, results_quarterly/plots/PD with time.png, results_quarterly/plots/Eq and Asset sigma with time.png, results_quarterly/tables/number_of_defaults_per_year.csv, results_quarterly/plots/quarterly total negative biod news.png
+    jobid: 1
+    reason: Missing output files: results_quarterly/tables/number_of_defaults_per_year.csv; Code has changed since last execution
+    resources: tmpdir=C:\Users\HP\AppData\Local\Temp
+RuleException:
+CalledProcessError in file "C:\Users\HP\Modelling-Default-Risk\Snakefile", line 33:
+Command 'C:/Users/HP/anaconda3/envs/myenv/python.exe "C:\Users\HP\Modelling-Default-Risk\.snakemake\scripts\tmpo9p0z7cm.descriptive_statistics.py"' returned non-zero exit status 1.
+[Tue Jul 15 13:38:44 2025]
+Error in rule descriptive_statistics:
+    message: None
+    jobid: 1
+    input: Data/Prepared Data/prepared_data_merton_pd.csv, Data/Raw Data/nyt_indices.csv
+    output: results_quarterly/plots/PD by quality rating.png, results_quarterly/plots/PD with time.png, results_quarterly/plots/Eq and Asset sigma with time.png, results_quarterly/tables/number_of_defaults_per_year.csv, results_quarterly/plots/quarterly total negative biod news.png
+Removing output files of failed job descriptive_statistics since they might be corrupted:
+results_quarterly/plots/PD by quality rating.png, results_quarterly/plots/PD with time.png, results_quarterly/plots/Eq and Asset sigma with time.png, results_quarterly/tables/number_of_defaults_per_year.csv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Tue Jul 15 13:38:44 2025]
+Error in rule descriptive_statistics:
+    message: None
+    jobid: 1
+    input: Data/Prepared Data/prepared_data_merton_pd.csv, Data/Raw Data/nyt_indices.csv
+    output: results_quarterly/plots/PD by quality rating.png, results_quarterly/plots/PD with time.png, results_quarterly/plots/Eq and Asset sigma with time.png, results_quarterly/tables/number_of_defaults_per_year.csv, results_quarterly/plots/quarterly total negative biod news.png
+Complete log(s): C:\Users\HP\Modelling-Default-Risk\.snakemake\log\2025-07-15T133832.665868.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
